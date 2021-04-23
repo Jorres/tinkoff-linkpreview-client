@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Client</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<script src="idea-try.js"></script>
+<div class="root">
+    <div class="search-bar-wrapper">
+        <p class="logo">
+            WebPreview
+        </p>
+        <p class="greeting">
+            Please, enter the link you'd like to know more about.
+        </p>
+        <div class="input-group mb-3 search-bar">
+            <input type="text" class="form-control search-bar__input" placeholder="">
+        </div>
+        <button class="btn btn-outline-secondary fetch-button" type="button" id="button-addon2">Fetch</button>
+    </div>
+    <div class="response-field-wrapper">
+        <p>This is where your response would be.</p>
+    </div>
+    <div class="query-options">
+        <div class="options-description">
+            Types of additional info<br> we can return you:
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="img">
+            <label class="custom-control-label" for="img">Information about images</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="video">
+            <label class="custom-control-label" for="video">Information about video files</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="a11y">
+            <label class="custom-control-label" for="a11y">Information about accessibility</label>
+        </div>
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="text">
+            <label class="custom-control-label" for="text">Text summary</label>
+        </div>
+    </div>
+</div>
+</body>
+</html>

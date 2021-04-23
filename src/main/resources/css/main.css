@@ -1,0 +1,101 @@
+body {
+    --main-width: 70%;
+}
+
+.root {
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
+
+    grid-template-areas:
+    " . . . . . "
+    " . h h h . "
+    " . t i i . "
+    " . t i i . "
+    " . . . . . ";
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.search-bar-wrapper {
+    grid-area: h;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 10px;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: "Courier New", monospace;
+}
+
+.search-bar {
+    width: 80%;
+}
+
+.fetch-button {
+    width: 20%;
+}
+
+.query-options {
+    grid-area: t;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.options-description {
+    font-size: 24px;
+    margin-left: 10%;
+}
+
+.custom-control {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 40px;
+
+    margin-left: 10%;
+    padding-left: 10%;
+
+    transition: 100ms linear;
+
+    border-radius: 10px;
+
+    background-color: rgba(10, 10, 10, 0.05);
+}
+
+.custom-control:hover {
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+.response-field-wrapper {
+    grid-area: i;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.response-field-wrapper pre {
+    white-space: pre-wrap;
+}
+.response-field-wrapper p {
+    margin-top: 200px;
+    margin-left: 30%;
+}
