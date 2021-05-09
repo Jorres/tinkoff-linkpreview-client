@@ -7,6 +7,7 @@ import org.w3c.dom.Element
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.events.Event
 import org.w3c.dom.events.EventListener
+import org.w3c.fetch.Headers
 import org.w3c.fetch.RequestInit
 
 external fun encodeURI(uri: String): String
@@ -35,12 +36,17 @@ class FetchListener: EventListener {
             accessibility = getFromCheckbox("a11y")
         )
 
-        window.fetch("http://localhost:8091/query/$encodedQueryURL", RequestInit(
+        val headers = Headers()
+        headers.append("Content-Type", "application/json")
+        val body = JSON.stringify(requestParams)
+        headers.append("Content-Length", "${body.length}")
+
+        window.fetch("http://localhost:8090/query/$encodedQueryURL", RequestInit(
             method = "POST",
+            headers = headers,
             body = JSON.stringify(requestParams)
         )).then {
             it.text().then { data ->
-                console.log(data)
                 val responseWindow = document.querySelector(".response-field-wrapper")
                 responseWindow!!.clearContents()
                 responseWindow.appendField(JSON.stringify(JSON.parse(data), null, space = 4))
