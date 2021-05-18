@@ -6,7 +6,14 @@ It is deployed at [www.tinkoff-linkpreview.xyz](www.tinkoff-linkpreview.xyz).
 
 #### Local launch
 
-To launch the client locally on UNIX-like, clone the repo and do `./gradlew browserDevelopmentRun` from
-the root of the repo.
+To launch the client locally on UNIX-like, clone the repo and do 
+```
+./gradlew browserDevelopmentRun
+``` 
+from the root of the repo.
 
-Launch the client as `gradlew browserDevelopmentRun` on Windows. 
+Launch the client as 
+```
+gradlew browserDevelopmentRun
+``` 
+on Windows. 
