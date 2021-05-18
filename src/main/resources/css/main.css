@@ -4,7 +4,7 @@ body {
 
 .root {
     display: grid;
-    grid-template-columns: 0.5fr repeat(3, 1fr) 0.5fr;
+    grid-template-columns: 0.3fr repeat(3, 1fr) 0.3fr;
     grid-template-rows: 0.5fr repeat(3, 1fr) 0.5fr;
 
     grid-template-areas:
@@ -62,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     width: 80%;
-    height: 40px;
+    height: 50px;
 
     margin-left: 10%;
     padding-left: 10%;
@@ -78,11 +78,35 @@ body {
     background-color: rgba(10, 10, 10, 0.4);
 }
 
+.custom-control-input {
+    margin: 0 20px;
+}
+
+.custom-alert {
+    position: absolute;
+    top: 170px;
+    right: 80px;
+    transition: 1s 0s ease-in-out;
+    opacity: 0;
+    border-radius: 10px;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.flex-switch {
+    display: flex;
+    align-items: center;
+}
+
 .response-field-wrapper {
     grid-area: i;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
 
@@ -94,8 +118,5 @@ body {
 
 .response-field-wrapper pre {
     white-space: pre-wrap;
-}
-.response-field-wrapper p {
-    margin-top: 200px;
-    margin-left: 30%;
+    width: 80%;
 }
